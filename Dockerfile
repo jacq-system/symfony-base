@@ -14,5 +14,6 @@ RUN  docker-php-ext-install intl opcache pdo pdo_mysql \
      && docker-php-ext-enable opcache \
      && docker-php-ext-install gd
 
+COPY ./www.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 
 USER www
