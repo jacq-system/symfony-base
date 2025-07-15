@@ -1,4 +1,4 @@
-FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:278626d05e7f59ade2b4d594caae717f50c3a12b59da02999f094ad885251753
+FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:5f6617912ddeacbc5470f8d030bf1d0edaca59c7667e2deefc44429c2573ff3f
 USER root
 
 RUN  apt-get update && apt-get dist-upgrade -y && \
