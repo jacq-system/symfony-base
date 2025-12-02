@@ -10,8 +10,7 @@ RUN  apt-get update && apt-get dist-upgrade -y && \
         apt-get autoremove -y && \
         rm -rf /var/lib/apt/lists/* /var/lib/log/* /tmp/* /var/tmp/*
 
-RUN  docker-php-ext-install intl opcache pdo pdo_mysql \
-     && docker-php-ext-enable opcache \
+RUN  docker-php-ext-install intl pdo pdo_mysql \
      && docker-php-ext-install gd
 
 COPY ./www.conf /usr/local/etc/php-fpm.d/zz-docker.conf
